@@ -6,7 +6,7 @@ python3 train_fmnist.py
 ```
 The script will load the configuration file `config_fmnist.yaml` and data matrices under `data/fmnist/`. 
 
-You can change the dataset, for example, to EMNIST, by modifying the `config.yaml` as 
+You can change the dataset, for example, to EMNIST, by modifying the `config.yaml` to 
 ```
 train_data_dir: data/emnist/digits/train.dat
 test_data_dir:  data/emnist/digits/test.dat
