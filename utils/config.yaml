@@ -1,0 +1,54 @@
+# device: "cuda" | "cpu"
+device: cuda
+debug: true
+
+# distributed networks
+# users:            number of users
+rounds: 50
+users: 300
+part_rate: 0.07
+
+
+lr: 0.01
+local_batch_size: 200
+loss: "ce"
+
+taus:
+- 100
+- 200
+- 300 
+- 400
+- 500
+- 600
+- 700
+- 800
+- 900
+- 1000
+- 1500
+- 2000
+# - 2500
+# - 3000
+# - 3500
+
+# Dataset configurations
+# train_data_dir: data/mnist/train.dat
+# test_data_dir:  data/mnist/test.dat
+train_data_dir: data/fmnist/train.dat
+test_data_dir:  data/fmnist/test.dat
+# train_data_dir: data/emnist/digits/train.dat
+# test_data_dir:  data/emnist/digits/test.dat
+user_with_data: ""
+user_with_data: "data/user_with_data/fmnist300/a0.1/user_dataidx_map_0.1_0.dat"
+datapoint_size:
+- 28
+- 28
+channels: 1
+label_size: 10
+
+# Log and record configurations
+record_dir:  ../{}.dat
+log_level:   "INFO"
+log_file:    "./train.log"
+
+model: "mlp"
+full_weight_dir: ""
