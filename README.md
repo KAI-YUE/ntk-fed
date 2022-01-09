@@ -1,4 +1,18 @@
-#### NTK Empowered Federated Learning 
+#### NTK Empowered Federated Learning
+
+We propose a novel federated learning paradigm empowered by the neural tangent kernel (NTK) framework. The paradigm addresses the challenge of statistical heterogeneity by transmitting update data that are more expressive than those of the traditional FL paradigms. Compared to traditional algorithms such as FedAvg, NTK-FL has a more centralized training flavor by transmitting more expressive updates.
+
+##### Prerequisites
+
+```bash
+pip3 install -r requirements.txt
+```
+The datasets have been preprocessed under `data` directory.
+
+<br />
+
+##### Example
+
 
 Run the example with fashion mnist dataset: 
 ```bash
@@ -6,13 +20,15 @@ python3 train_fmnist.py
 ```
 The script will load the configuration file `config_fmnist.yaml` and data matrices under `data/fmnist/`. 
 
-You can change the dataset, for example, to EMNIST, by modifying the `config.yaml` as 
+You can change the dataset, for example, to EMNIST, by modifying the `config.yaml` to 
 ```
 train_data_dir: data/emnist/digits/train.dat
 test_data_dir:  data/emnist/digits/test.dat
 ```
 
-#### Degree of Heterogeneity
+<br />
+
+##### Change the Degree of Heterogeneity
 
 The `user_with_data` files predefine the [Dirichlet non-IID partitions [HQB19]](https://arxiv.org/abs/1909.06335)  with different degrees of heterogeneity.  If you want to generate different partitions, you can use the following code snippets:
 ```python

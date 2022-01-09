@@ -1,0 +1,5 @@
+numpy==1.19.5
+opt_einsum==3.3.0
+PyYAML==6.0
+torch==1.9.0+cu111
+torchdiffeq==0.2.2
