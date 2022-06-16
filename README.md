@@ -1,11 +1,11 @@
-#### NTK Empowered Federated Learning
-![](https://img.shields.io/badge/Python-3-blue) ![](https://img.shields.io/badge/Pytorch-1.9.0-blue)
+## NTK Empowered Federated Learning
+![](https://img.shields.io/badge/Python-3-blue) ![](https://img.shields.io/badge/Pytorch-1.9.0-blue) ![](https://img.shields.io/badge/arxiv-2110.03681-red)
 
-We propose a novel federated learning paradigm empowered by the neural tangent kernel (NTK) framework. The paradigm addresses the challenge of statistical heterogeneity by transmitting update data that are more expressive than those of the traditional FL paradigms. Compared to traditional algorithms such as FedAvg, NTK-FL has a more centralized training flavor by transmitting more expressive updates. This repository contains the simulations for the federated learning paradigm.
+In this [paper](https://arxiv.org/abs/2110.03681), we propose a novel federated learning paradigm empowered by the neural tangent kernel (NTK) framework. The paradigm addresses the challenge of statistical heterogeneity by transmitting update data that are more expressive than those of the traditional FL paradigms. Compared to traditional algorithms such as FedAvg, NTK-FL has a more centralized training flavor by transmitting more expressive updates. This repository contains the simulations for the federated learning paradigm.
 
 <br />
 
-##### Prerequisites
+### Prerequisites
 
 ```bash
 pip3 install -r requirements.txt
@@ -14,7 +14,7 @@ The datasets have been preprocessed under `data` directory.
 
 <br />
 
-##### Example
+### Example
 
 
 Run the example with fashion mnist dataset: 
@@ -31,7 +31,7 @@ test_data_dir:  data/emnist/digits/test.dat
 
 <br />
 
-##### Change the Degree of Heterogeneity
+### Change the Degree of Heterogeneity
 
 The `user_with_data` files predefine the [Dirichlet non-IID partitions [HQB19]](https://arxiv.org/abs/1909.06335)  with different degrees of heterogeneity.  If you want to generate different partitions, you can use the following code snippets:
 ```python
@@ -66,3 +66,15 @@ for user_id in range(num_users):
         
     user_dataidx_map[user_id] = np.hstack(current_user_dataidx).astype(np.int).flatten()
 ``` 
+
+<br />
+
+### Citation
+```
+@inproceedings{yue2022neural,
+  title={Neural Tangent Kernel Empowered Federated Learning},
+  author={Yue, Kai and Jin, Richeng and Pilgrim, Ryan and Wong, Chau-Wai and Baron, Dror and Dai, Huaiyu},
+  booktitle={International Conference on Machine Learning},
+  year={2022}
+}
+```
